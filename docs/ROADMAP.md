@@ -1,29 +1,39 @@
-# Roadmap
+# ROADMAP
 
-## MVP
+## Phase 1
 
-- Chat
+MVP
+
+- Mobile App
+- AI Chat
 - Projects
-- Smart Terminal
-- GitHub
-- Supabase
-- Vercel
+- Connectors
+
+---
 
 ## Phase 2
+
+Builder Integrations
 
 - Bolt
 - Lovable
 - Base44
-- Cursor Style Coding
+
+---
 
 ## Phase 3
 
+Marketplace
+
 - AI Marketplace
-- Team Workspace
-- Multi Agent Workflows
+- Connector Marketplace
+
+---
 
 ## Phase 4
 
-- Full Project Export
-- Full Project Import
-- .3iii Workspace Package
+Organization Workspace
+
+- Teams
+- Permissions
+- Collaboration
