@@ -1,25 +1,33 @@
-{
-  "version": "1.0",
-  "type": "3iii-project",
+create table profiles (
+    id uuid primary key,
+    email text,
+    display_name text,
+    created_at timestamp
+);
 
-  "metadata": {
-    "name": "",
-    "created_at": "",
-    "updated_at": ""
-  },
+create table projects (
+    id uuid primary key,
+    owner_id uuid,
+    name text,
+    description text,
+    goal text,
+    type text,
+    visibility text,
+    created_at timestamp
+);
 
-  "project": {
-    "name": "",
-    "description": "",
-    "goal": "",
-    "project_type": ""
-  },
+create table chats (
+    id uuid primary key,
+    project_id uuid,
+    role text,
+    content text,
+    created_at timestamp
+);
 
-  "chat": [],
-
-  "tasks": [],
-
-  "context": [],
-
-  "references": []
-}
+create table connectors (
+    id uuid primary key,
+    owner_id uuid,
+    provider text,
+    account_name text,
+    created_at timestamp
+);
