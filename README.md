@@ -1,13 +1,69 @@
-# 3iii-Copilot
+# 3iii-Copilot [AI & Coding]
 
-build & create develop 3iii-copilot app (Coding - Ai builder)
+● ไม่ว่าโปรเจ็คไหน
+3iii-Copilot พร้อมไปกับคุณ
 
-## Project direction
+Code เองก็ได้
+AI Assist ก็ได้
 
-3iii-Copilot is a mobile-first AI coding workspace. The product requirements specify Flutter for the frontend, Supabase for backend services, PostgreSQL for the database, and Thai-speaking users as a primary audience.
+หรือให้ AI ทำงานร่วมกับคุณตลอดทั้งโปรเจ็ค ●
 
-## Development setup
+---
 
-- Open this repository in Visual Studio Code and install the recommended extensions when prompted.
-- See [Copilot, MCP, and language setup](docs/COPILOT-SETUP.md) for editor recommendations, MCP configuration guidance, and Thai/English localization conventions.
-- The repository currently contains product documentation rather than a Flutter application scaffold. Application localization runtime setup should be added alongside the app scaffold.
+## Vision
+
+The Operating System for AI Projects
+
+3iii-Copilot เป็น Mobile-First AI Coding Workspace
+ที่รวม AI หลายผู้ให้บริการไว้ในระบบเดียว
+พร้อม Project Isolation และ Smart Terminal
+
+---
+
+## Core Features
+
+### Chat
+
+- General Chat
+- Multi AI Routing
+- Import Chat
+- Export Chat
+
+### Projects
+
+- Multiple Projects
+- Project Isolation
+- Project Context
+- Shared Files
+
+### AI
+
+- 3iii-Copilot
+- OpenAI GPT
+- Claude
+- Gemini
+
+### Connectors
+
+- GitHub
+- Supabase
+- Vercel
+
+### Terminal
+
+- Smart Terminal
+- AI Assisted Commands
+
+### Export
+
+- PDF
+- Markdown
+- .3iii
+
+---
+
+## MVP Status
+
+Planning Phase
+
+Version: 0.1.0
