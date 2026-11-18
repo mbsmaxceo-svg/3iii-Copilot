@@ -1,54 +1,51 @@
-# MVP v1.0
+# MVP Definition
 
-## Goal
+Version 1.0
 
-สร้างต้นแบบสำหรับ Android
-ที่สามารถใช้งานจริงได้
+Target Platform
+
+Android
 
 ---
 
-## Features
+Included
 
-### Authentication
+✅ Login
 
-- Google Login
-- Microsoft Login
-- GitHub Login
+✅ Projects
 
-### Dashboard
+✅ General Chat
 
-- New Chat
-- Projects
-- Profile
+✅ AI Routing
 
-### Project
+✅ Smart Terminal
 
-- Create Project
-- Project Isolation
-- Files
-- Smart Terminal
+✅ GitHub Connector
 
-### AI
+✅ Supabase Connector
 
-- Main AI
-- GPT
-- Claude
-- Gemini
+✅ Vercel Connector
 
-### Connectors
+✅ Export
 
-- GitHub
-- Supabase
-- Vercel
+✅ Import
 
-### Export
+✅ .3iii
 
-- PDF
-- Markdown
-- .3iii
+---
 
-### Import
+Excluded
 
-- TXT
-- MD
-- .3iii
+❌ Team Workspace
+
+❌ Marketplace
+
+❌ Bolt
+
+❌ Lovable
+
+❌ Base44
+
+❌ Desktop
+
+❌ iOS
