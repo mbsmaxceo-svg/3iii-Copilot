@@ -83,7 +83,7 @@ Storage bucket ต้องเป็น private และ policy ของ objec
 1. ผู้ใช้ลงชื่อเข้าใช้ผ่าน Supabase Auth และรับ session/JWT.
 2. Flutter โหลด workspace/project ผ่าน Supabase API; PostgreSQL RLS กรองแถวตามสิทธิ์ทุกครั้ง.
 3. คำขอ AI ส่งเฉพาะ context ที่ผู้ใช้เลือกไปยัง Edge Function พร้อม JWT; function ตรวจผู้ใช้และสิทธิ์ project ก่อนเรียก provider.
-4. Edge Function เลือก OpenAI, Anthropic หรือ Google AI ตาม routing ที่ผู้��ช้ร้องขอ, เก็บ secret ฝั่ง server, จำกัด input/output และบันทึกผลตามนโยบาย retention.
+4. Edge Function เลือก OpenAI, Anthropic หรือ Google AI ตาม routing ที่ผู้ใช้ร้องขอ, เก็บ secret ฝั่ง server, จำกัด input/output และบันทึกผลตามนโยบาย retention.
 5. ผลตอบกลับถูกบันทึกเป็น message/task โดยใช้สิทธิ์ผู้ใช้ ไม่ข้าม project boundary.
 6. การนำเข้า/ส่งออก `.3iii` ตรวจ JSON ด้วย `schemas/3iii-file-schema.json` ก่อนใช้งาน และไม่ execute เนื้อหาจากไฟล์นำเข้า.
 
