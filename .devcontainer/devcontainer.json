@@ -1,0 +1,25 @@
+{
+  "name": "3iii-Copilot HTML5",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm",
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {}
+  },
+  "forwardPorts": [8000],
+  "portsAttributes": {
+    "8000": {
+      "label": "HTML5 preview",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  "postCreateCommand": "corepack enable",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "GitHub.copilot",
+        "GitHub.copilot-chat",
+        "ecmel.vscode-html-css"
+      ]
+    }
+  },
+  "remoteUser": "node"
+}
