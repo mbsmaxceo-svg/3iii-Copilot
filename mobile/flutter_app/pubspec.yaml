@@ -1,0 +1,20 @@
+name: 3iii_copilot
+ description: Mobile-first AI coding workspace for 3iii-Copilot.
+ publish_to: "none"
+ version: 0.1.0+1
+ environment:
+   sdk: ">=3.3.0 <4.0.0"
+ dependencies:
+   flutter:
+     sdk: flutter
+   flutter_localizations:
+     sdk: flutter
+   intl: ^0.19.0
+   supabase_flutter: ^2.8.0
+ dev_dependencies:
+   flutter_test:
+     sdk: flutter
+   flutter_lints: ^5.0.0
+ flutter:
+   generate: true
+   uses-material-design: true
