@@ -1,0 +1,53 @@
+name: Release
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  workflow_dispatch:
+    inputs:
+      target:
+        type: choice
+        options: [android, web, both]
+        default: both
+
+jobs:
+  # ---- Staging (ทุกครั้งที่ push main) ----
+  build-staging:
+    if: github.ref == 'refs/heads/main'
+    uses: my-org/ci-templates/.github/workflows/flutter-build.yml@v1.0.0
+    with:
+      target: ${{ github.event.inputs.target || 'both' }}
+      environment: staging
+      build_name: '0.0.0-staging'
+      android_format: apk
+      split_per_abi: true
+      base_href: '/staging/'
+    secrets:
+      R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+      R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      R2_BUCKET: ${{ secrets.R2_BUCKET }}
+      # staging ไม่ต้องใช้ signing key จริง (จะ build unsigned)
+  
+  # ---- Production (เฉพาะ tag v*) ----
+  build-production:
+    if: startsWith(github.ref, 'refs/tags/v')
+    uses: my-org/ci-templates/.github/workflows/flutter-build.yml@v1.0.0
+    with:
+      target: both
+      environment: production
+      build_name: ${{ github.ref_name }}     # เช่น v1.2.0
+      android_format: appbundle
+      split_per_abi: false
+      base_href: '/'
+    secrets:
+      R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+      R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      R2_BUCKET: ${{ secrets.R2_BUCKET }}
+      # production ใช้ signing key จาก environment 'production'
+      KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
+      KEY_STORE_PASSWORD: ${{ secrets.KEY_STORE_PASSWORD }}
+      KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+      KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
