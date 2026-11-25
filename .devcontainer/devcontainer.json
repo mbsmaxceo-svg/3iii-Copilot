@@ -1,23 +1,27 @@
 {
-  "name": "3iii-Copilot HTML5",
+  "name": "3iii-Copilot Flutter",
   "image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm",
   "features": {
-    "ghcr.io/devcontainers/features/git:1": {}
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers-contrib/features/dart-flutter:latest": {
+      "channel": "stable"
+    }
   },
   "forwardPorts": [8000],
   "portsAttributes": {
     "8000": {
-      "label": "HTML5 preview",
+      "label": "App preview",
       "onAutoForward": "openBrowser"
     }
   },
-  "postCreateCommand": "corepack enable",
+  "postCreateCommand": "cd mobile/flutter_app && flutter pub get && flutter gen-l10n",
   "customizations": {
     "vscode": {
       "extensions": [
         "GitHub.copilot",
         "GitHub.copilot-chat",
-        "ecmel.vscode-html-css"
+        "Dart-Code.dart-code",
+        "Dart-Code.flutter"
       ]
     }
   },
